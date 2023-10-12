@@ -1,0 +1,25 @@
+README for Semaphores and Message Passing Project
+Name: Steven Cartwright
+Date: 10/12/2023
+
+Overview:
+This project involves implementing concurrency control using semaphores and ensuring proper synchronization between processes accessing a shared resource. The master process spawns multiple slave processes, each attempting to access a critical section in a controlled manner.
+
+Files:
+master.c: Contains the main functionality for spawning child processes and handling semaphores.
+slave.c: Represents the behavior of slave processes, attempting to access the critical section.
+cstest: The shared file that slave processes write to when they access the critical section.
+logfile.xx: Each represents a log from a specific child process (where xx is the process number). Contains timestamps for when processes request, enter, and exit the critical section.
+Features:
+Semaphores are used to ensure that only one process accesses the critical section at a time.
+Proper synchronization between processes is achieved.
+Handling for situations where the number of processes exceeds the specified limit.
+Proper signal handling to ensure graceful termination and cleanup of resources.
+Timer functionality to terminate processes after a certain duration.
+Special Considerations:
+The system ensures that at no time are there more than 20 processes running concurrently. If a request is made for more than this limit, a warning is issued
+
+Usage:
+To run the program, use the following command:
+./master -t [time in seconds] [number of processes]
+.
