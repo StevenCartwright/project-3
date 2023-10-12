@@ -2,3 +2,4 @@ Day 1: Imported code from project 2. Initialized Makefile and Git setup.
 Day 2: Updated master to support semaphores.
 Day 3: Master can now fork and exec one child. Integrated semaphore with child process. Retained signal handling from previous project.
 Day 3: Master can now fork and exec one child. Integrated semaphore with child process. Retained signal handling from previous project.
+Day 4: Implemented and tested slave as a standalone process.
